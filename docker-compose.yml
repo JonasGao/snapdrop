@@ -23,3 +23,6 @@ services:
     env_file: ./docker/fqdn.env
     entrypoint: /mnt/openssl/create.sh
     command: ["nginx", "-g", "daemon off;"]
+  sturn:
+    image: coturn/coturn
+    network_mode: host
